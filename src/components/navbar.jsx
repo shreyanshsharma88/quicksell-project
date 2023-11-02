@@ -9,7 +9,6 @@ export const SortByOptions = () => {
     const param = new URLSearchParams(sp);
     param.set(parameter, event.target.value);
     ssp(param);
-    console.log(event.target.value);
   };
   return (
     <div
@@ -27,7 +26,7 @@ export const SortByOptions = () => {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ color: "#A8A8A9" }}>Grouping</div>
         <select
-          value={sp.get("groupBy")}
+          value={sp.get("groupBy") ?? ''}
           onChange={(e) => handleChange(e, "groupBy")}
           style={{
             width: "30%",
@@ -44,7 +43,7 @@ export const SortByOptions = () => {
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ color: "#A8A8A9" }}>Ordering</div>
         <select
-          value={sp.get("orderedBy")}
+          value={sp.get("orderedBy")?? ''}
           style={{
             width: "30%",
             padding: "5px",
@@ -62,7 +61,6 @@ export const SortByOptions = () => {
 };
 export const Navbar = () => {
   const { tasks, setShowSortByOptions } = useTasksContext();
-  console.log(tasks);
   return (
     <div style={{ padding: "25px", backgroundColor: "white" }}>
       <div
