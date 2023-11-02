@@ -41,9 +41,9 @@ export const Main = () => {
       {/* <Card /> */}
       <GroupedTasks
         options={
-          sp.get("groupBy") === "status"
+          sp?.get("groupBy") === "status"
             ? statusOptions
-            : sp.get("groupBy") === "user"
+            : sp?.get("groupBy") === "user"
             ? userOptions
             : priorityOptions
         }

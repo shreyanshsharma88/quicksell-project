@@ -18,7 +18,7 @@ export const TasksProvider = ({children}) => {
     const getTasks = useQuery(
         [],
         () => axios.get('https://api.quicksell.co/v1/internal/frontend-assignment '),{
-            onSuccess: (res) => setTasks(res.data),
+            onSuccess: (res) => setTasks(res?.data),
             onError: (error) => console.log(error)
         }
     )
