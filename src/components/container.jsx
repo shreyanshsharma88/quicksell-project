@@ -1,12 +1,11 @@
 import { useSearchParams } from "react-router-dom";
 import { useTasksContext } from "../context/context";
 import { useCardOptions } from "../utils/makeCardValues";
-import { Card } from "./card";
 import { Navbar, SortByOptions } from "./navbar";
 import { GroupedTasks } from "./showGroupedTasks";
 
 export const Main = () => {
-  const { showSortByOptions, tasks } = useTasksContext();
+  const { showSortByOptions } = useTasksContext();
   const [sp] = useSearchParams();
   const priorityOptions = [
     { label: "No Priority", value: useCardOptions("priority", 0) },

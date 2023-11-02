@@ -1,10 +1,7 @@
 import { CgProfile } from "react-icons/cg";
 import { BiSolidInfoSquare } from "react-icons/bi";
-import { useViewPort } from "../utils/useViewPort";
-import { values } from "pdf-lib";
 
 export const Card = (ticket) => {
-  const { isMobile } = useViewPort();
   return (
     <div
       style={{
