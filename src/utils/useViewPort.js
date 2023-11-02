@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect, useEffect } from 'react';
 
 export const useViewPort = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth >= 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 450);

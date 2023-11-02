@@ -5,10 +5,12 @@ import { useSearchParams } from "react-router-dom";
 
 export const SortByOptions = () => {
   const [sp, ssp] = useSearchParams();
+  const{setShowSortByOptions} = useTasksContext()
   const handleChange = (event, parameter) => {
     const param = new URLSearchParams(sp);
     param.set(parameter, event.target.value);
     ssp(param);
+    setShowSortByOptions(false)
   };
   return (
     <div
@@ -62,7 +64,7 @@ export const SortByOptions = () => {
 export const Navbar = () => {
   const { tasks, setShowSortByOptions } = useTasksContext();
   return (
-    <div style={{ padding: "25px", backgroundColor: "white" }}>
+    <div style={{ padding: "25px", backgroundColor: "white"}}>
       <div
         onClick={() => setShowSortByOptions((p) => !p)}
         style={{

@@ -24,7 +24,7 @@ export const useCardOptions = (field, value) => {
   if (sp?.get("sortBy") === "priority") {
     tickets?.sort((t1, t2) => t2?.priority - t1?.priority);
   } else if (sp?.get("sortBy") === "title") {
-    tickets?.sort((t1, t2) => t2?.title - t1?.title);
+    tickets?.sort((t1, t2) => t2?.title?.length - t1?.title?.length);
   }
 
   return tickets;

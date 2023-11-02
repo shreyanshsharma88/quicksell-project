@@ -5,14 +5,14 @@ export const Card = (ticket) => {
   return (
     <div
       style={{
-        width: "330px",
+        // width: "330px",
         backgroundColor: "white",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         padding: "16px",
         display: "grid",
         gap: "10px",
         borderRadius: "15PX",
-        height:'150px'
+        minHeight: "150px",
       }}
     >
       <div
